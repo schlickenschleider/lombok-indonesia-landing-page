@@ -1,0 +1,765 @@
+
+
+*,*::before, *::after {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0 auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3447b3;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    height: 80px;
+    width: 100%;
+    transition: .5s;
+}
+
+.brand-title {
+    display: inline-block;
+    transition: 0.5s;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+}
+
+#navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3447b3;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    height: 80px;
+    width: 100%;
+    transition: .5s;
+  }
+
+#navbar #logo {
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.navbar-links ul li a:hover {
+    background-color: #09468bd7;
+} 
+
+.toggle-button {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 21px;
+    width: 30px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        background-color: #09468bd7;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px 10px;
+    grid-template-areas: ". content content content content .";
+}
+
+.grid-travel-detail {
+    margin-top: 2rem;
+    padding-bottom: 3.5rem;
+}
+
+.grid-video {
+    grid-template-areas: "video video video travel travel travel";
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    align-items: center;
+}
+
+.grid-video video {
+    grid-area: video;
+    width: 100%;
+    max-width: 900px;
+}
+
+.content {
+    grid-area: content;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.dark-header {
+    background-color: #3447b3;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+.light-header {
+    background-color: #f5ef7d;
+    color: rgb(255, 255, 255);
+    padding-top: 250px;
+    margin-top: -250px;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+    
+.sub-title {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.title-button {
+    background-color: #3447b3;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-items: center;
+    font-size: 1.6rem;
+    max-width: 8em;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: .5em;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 7px rgba(72, 94, 116, 0.5);
+    transition: background-color .2s ease-in-out;
+}
+
+.title-button:hover {
+    background-color: #237de4d7;
+}
+
+.dark-header-divider {
+    background-image: url('/images/dark-background.svg');
+    height: 100px;
+    margin: -5px;
+    background-position: bottom right;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.light-header-divider {
+    background-image: url('/images/light-background.svg');
+    height: 100px;
+    margin: -5px;
+    background-position: bottom left;
+    background-size: cover;
+}
+
+.travel-section {
+    grid-area: travel;
+    margin-left: 2rem;
+    justify-self: flex-start;
+    color: #333;
+}
+
+.travel {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.travel img {
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.travel-detail {
+    grid-column: span 2;
+    margin: 2rem;
+    color: #333;
+}
+
+.travel-detail-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.travel-detail-text {
+    font-size: 1.25rem;
+    color: #444;
+    font-weight: lighter;
+}
+
+.lombok-pictures-1 {
+    display: flex;
+    background-color: #f5ef7d;
+    width: 100%;
+    height: 680px;
+    font-family: inherit;
+    justify-content: center;
+}
+
+.lombok-pictures-2 {
+    display: flex;
+    width: 100%;
+    height: 680px;
+    font-family: inherit;
+    justify-content: center;
+}
+
+
+.lombok-picture {
+    grid-area: picture;
+    margin-left: 2rem;
+    justify-self: center;
+    align-self: center;
+    color: #333; 
+}
+
+.lombok-picture2 {
+    grid-area: picture;
+    margin-left: 1rem;
+    justify-self: center;
+    align-self: center;
+    color: #333; 
+}
+
+.lombok-picture2 img {
+    display: flex;
+    height: 625px;
+    width: 525px;
+    max-width: 550px;
+    padding: 3rem 4.5rem;
+}
+
+.lombok-picture img {
+    display: flex;
+    height: 625px;
+    width: 525px;
+    max-width: 550px;
+    padding: 3rem 4.5rem;
+}
+
+.lombok-detail {
+    grid-column: span 2;
+    color: #333;
+    align-self: center;
+    justify-self: start;
+}
+
+.lombok-detail2 {
+    grid-column: span 2;
+    margin-left: 4rem;
+    padding-left: 6rem;
+    justify-self: center;
+    align-self: center;
+    color: #333; 
+}
+
+.lombok-detail2-title {
+    grid-column: span 2;
+    color: #333;
+    align-self: center;
+    justify-self: end;
+}
+
+.lombok-detail-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.lombok-detail-text {
+    font-size: 1.5rem;
+    color: #444;
+    font-weight: lighter;
+    justify-self: center;
+}
+
+.lombok-detail2-text {
+    font-size: 1.5rem;
+    color: #444;
+    font-weight: lighter;
+    justify-self: center;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.heading-section {
+    display: flex;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 4rem;
+}
+
+.grid-contact {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+.contact-form {
+    display: grid;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    margin-top: 7.5rem;
+}
+
+.wrapper {
+    background-color: #dfecee;
+    width: 450px;
+    height: 500px;
+    margin-top: 1.25em;
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+
+.wrapper > *{
+    padding: 1.5em;
+}
+
+.contact-form {
+    background-image: url(/images/coconut-tree.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+    display: grid;
+    justify-content: left;
+    width: 1000px;
+    height: 700px;
+}
+
+/* FORM STYLES */
+
+.contact h2 {
+    margin: 1rem;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: .5rem;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact form p {
+    margin: .5rem;
+}
+
+.contact form .full {
+    grid-column: 1 / 3;
+}
+
+.contact form button, .contact form input, .contact form textarea {
+    width: 100%;
+    padding: .5em;
+    border: none;
+    border-radius: 4px;
+}
+
+.contact form button {
+    background-color: #3447b3;
+    color: #fff;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.contact form button:hover, .contact form button:focus {
+    background-color: #237de4d7;
+    outline: 0;
+    transition: background-color .2s ease-in-out;
+    cursor: pointer;
+}
+
+.form-header {
+    padding: 1rem;
+}
+
+.form-group {
+    margin: .5rem, 0, .5rem, 1rem;  
+}
+
+.label {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+    }
+
+    .grid-video {
+        grid-template-columns: 1fr;
+        grid-template-areas: "video" "travel";
+    }
+
+    .grid-video video {
+        justify-self: center;
+    }
+
+    .grid-travel-detail {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .travel-section {
+        margin-top: 4rem;
+        margin-left: 0;
+        justify-self: center;
+    }
+
+    .lombok-pictures {
+        grid-template-columns: 2fr;
+        grid-template-areas: "picture" "detail";
+    }
+
+    .lombok-picture1 img {
+        justify-self: center;
+    }
+
+    .lombok-detail-title {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .lombok-detail-text {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid-travel-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .lombok-pictures {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .brand-title {
+        font-size: 1.5rem;
+        align-self: center;
+        padding: 0;
+    }
+
+    .travel {
+        font-size: 2rem;
+    }
+    
+    .travel img {
+        height: 2rem;
+        margin-right: 1rem;
+    }
+
+    .lombok-pictures {
+        font-size: 2rem;
+        align-self: center;
+    }
+
+    .contact form .full {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-self: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .navbar {
+        height: 20px;
+        width: auto;
+    }
+
+    .brand-title {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .travel-section {
+        margin-bottom: 0;
+    }
+
+
+    .travel {
+        font-size: 1.25rem;
+    }
+
+    .travel img {
+        height: 1.25rem;
+        margin-right: 0.5rem;
+    }
+
+    .travel-detail-title {
+        font-size: 1.25rem;
+    }
+
+    .travel-detail-text {
+        font-size: 1rem;
+    }
+
+    .travel-detail {
+        margin: 0;
+    }
+
+    .grid-travel-detail {
+        margin-top: .5rem;
+    }
+
+    .grid-video {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .lombok-pictures {
+        margin-bottom: 0;
+    }
+
+    .travel {
+        font-size: 1.25rem;
+    }
+
+    .lombok-picture img {
+        height: 1rem;
+        padding: .25rem;
+    }
+
+    .lombok-detail-title {
+        font-size: 1.25rem;
+    }
+
+    .lombok-detail-text {
+        font-size: 1rem;
+    }
+
+    .lombok-detail {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lombok-pictures {
+        margin-top: .5rem;
+    }
+
+    .lombok-pictures2 {
+        margin-top: .5rem;
+    }
+}
+
+footer {
+    background-color: #3447b3;
+    height: auto;
+    width: auto;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px;
+    color: #fff;
+    font-style: inherit;
+}
+
+.footer > *{
+    flex: 1 100%;
+}
+
+.footer-left {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+    margin-top: 1.25em;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2em;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer-right {
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.box a {
+    color: rgb(214, 202, 202);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-left p{
+    padding-right: 20%;
+    color: rgb(214, 202, 202);
+
+}
+
+.socials a {
+    background-color: #263381;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 15px;   
+}
+
+.socials a i {
+    color: #e7f2f4;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 600px){
+    .footer-right > *{
+        flex: 1;
+    }
+
+    .footer-left{
+        flex: 1 0px;
+    }
+
+    .footer-right{
+        flex: 2 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer{
+        padding: 15px;
+    }
+}

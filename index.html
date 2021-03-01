@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalise.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Responsive Landing Page</title>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="brand-title" id="logo">Lombok</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Lombok</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="dark-header grid">
+            <div class="content"> 
+                <h1 class="title">Magical Indonesia</h1>
+                <h3 class="sub-title">
+                    Discover the natural beauty on
+                    <em>Adventure Travel</em> 
+                    in tropical island of Lombok!
+                </h3>
+            </div>
+        </div>
+        <div class="dark-header-divider"></div>
+        <div class="light-header grid">
+            <div class="content">
+                <div class="brand-row">
+                    <button class="title-button">Find More</button>
+                </div>
+            </div>
+        </div>
+        <div class="light-header-divider"></div>
+    </header>
+
+    <main>
+        <section class="grid grid-video">
+            <video poster="" controls>
+                <source src="setangi-beach.mp4" type="video/mp4">
+            </video>
+            <div class="travel-section">
+                <div class="travel">
+                    <img src="/images/palmtree.svg" alt="icon">
+                    Stunning beaches
+                </div>
+                <div class="travel">
+                    <img src="/images/turtle.svg" alt="icon">
+                    Beautiful nature
+                </div>
+                <div class="travel">
+                    <img src="/images/surfing.svg" alt="icon">
+                    Adventures for you!
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-travel-detail">
+            <div class="travel-detail">
+                <div class="travel-detail-title">
+                    Stunning beaches
+                </div>
+                <div class="travel-detail-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque quasi voluptatum voluptas! Atque et facilis doloribus consequuntur eligendi natus odit rerum quo! Eaque excepturi officiis neque laboriosam ducimus! Velit.
+                </div>
+            </div>
+            <div class="travel-detail">
+                <div class="travel-detail-title">
+                    Beautiful nature
+                </div>
+                <div class="travel-detail-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque quasi voluptatum voluptas! Atque et facilis doloribus consequuntur eligendi natus odit rerum quo! Eaque excepturi officiis neque laboriosam ducimus! Velit.
+                </div>
+            </div>
+            <div class="travel-detail">
+                <div class="travel-detail-title">
+                    Adventures for you!
+                </div>
+                <div class="travel-detail-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque quasi voluptatum voluptas! Atque et facilis doloribus consequuntur eligendi natus odit rerum quo! Eaque excepturi officiis neque laboriosam ducimus! Velit.
+                </div>
+            </div>    
+        </section>
+        <section class="lombok-pictures">
+            <div class="lombok-pictures-1">
+                <div class="lombok-picture">
+                        <img src="/images/pic1.jpg" alt="beach">
+                    </div>
+                    <div class="lombok-detail">
+                        <div class="lombok-detail-title">Pristine & Secluded</div>
+                        <div class="lombok-detail-text"><em>Explore Lombok's hidden gems</em></div>
+                    </div>
+            </div>
+            <div class="lombok-pictures-2">
+                    <div class="lombok-detail2">
+                        <div class="lombok-detail-title">Tropical & Wild</div>
+                        <div class="lombok-detail-text"><em>Surrounded by nature</em></div>
+                    </div>
+                    <div class="lombok-picture2">
+                        <img src="/images/pic2.jpg" alt="nature">
+                    </div>
+            </div>
+            <div class="lombok-pictures-1">
+                <div class="lombok-picture">
+                        <img src="/images/pic3.jpg" alt="surf">
+                    </div>
+                    <div class="lombok-detail">
+                        <div class="lombok-detail-title">Warm & Crystal-clear</div>
+                        <div class="lombok-detail-text"><em>Fall in love with the ocean</em></div>
+                    </div>
+            </div>
+        </section>
+        <section>
+            <div class="travel-info">
+                <div class="travel-island"></div>
+                <div class="travel-island"></div>
+                <div class="travel-island"></div>
+            </div>
+        </section>
+        <section class="contact-form">
+            <div class="wrapper">
+                <div class="contact">
+                    <h2>Email Us</h2>
+                    <form>
+                        <p>
+                            <label>Name</label>
+                            <input type="text" name="name">
+                        </p>
+                        <p>
+                            <label>Company</label>
+                            <input type="text" name="company">
+                        </p>
+                        <p>
+                            <label>Email</label>
+                            <input type="email" name="email">
+                        </p>
+                        <p>
+                            <label>Phone</label>
+                            <input type="text" name="phone">
+                        </p>
+                        <p class="full">
+                            <label>Message</label>
+                            <textarea name="message" id="" cols="3" rows="3"></textarea>
+                        </p>
+                        <p class="full">
+                            <button>Submit</button>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+   <footer class="footer">
+       <div class="footer-left">
+           <h2>About Us</h2>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque ad perspiciatis quisquam tempora amet vel delectus adipisci rem sed non sint suscipit, expedita labore cumque eius explicabo magni quae corrupti?</p>
+           <div class="socials">
+               <a href="#"><i class="fa fa-facebook"></i></a>
+               <a href="#"><i class="fa fa-instagram"></i></a>
+               <a href="#"><i class="fa fa-twitter"></i></a>
+               <a href="#"><i class="fa fa-tumblr"></i></a>
+           </div>
+       </div>
+       <ul class="footer-right">
+           <li>
+               <h2>Lombok</h2>
+
+               <ul class="box">
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Investment</a></li>
+                    <li><a href="#">Services</a></li>
+               </ul>
+           </li>
+
+           <li class="features">
+            <h2>Useful Links</h2>
+
+            <ul class="box">
+                 <li><a href="#">Blog</a></li>
+                 <li><a href="#">Guide</a></li>
+                 <li><a href="#">Pricing</a></li>
+                 <li><a href="#">Discover</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>Address</h2>
+
+            <ul class="box">
+                 <li><a href="#">123 St Kilda Way</a></li>
+                 <li><a href="#">St Kilda</a></li>
+                 <li><a href="#">VIC 3181</a></li>
+                 <li><a href="#">Australia</a></li>
+            </ul>
+        </li>
+    </ul>
+
+        <div class="footer-bottom">
+            <p>All Right Reserved by &copy; Varsoline 2021</p>
+        </div>  
+   </footer>
+</body>
+</html>
